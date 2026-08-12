@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 2px;
+  position: relative;
+}
+
+.navbar a.active {
+  color: var(--accent);
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--accent);
+}
