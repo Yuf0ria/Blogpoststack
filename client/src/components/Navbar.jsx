@@ -5,9 +5,10 @@ export default function Navbar(){
         <div>
             <nav>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/blog">Blog</NavLink>
-                <NavLink to="/about">About</NavLink>
                 <NavLink to="/projects">Projects</NavLink>
+                <NavLink to="/blog">Blog</NavLink>
+                <NavLink to="/Inquire">Inquire</NavLink>
+                
             </nav>
         </div>
     )

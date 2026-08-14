@@ -5,7 +5,7 @@
   padding: 20px 0;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }

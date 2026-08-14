@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 @import './styles/base.css'; 
 @import './styles/form.css'; 
 @import './styles/blog.css'; 
 @import './styles/Navbar.css'; 
 @import './styles/home.css';
-@import 'tailwindcss';
+
 
 :root {
   --text: #FAFAFA;
@@ -18,11 +19,11 @@
   --accent-bg: rgba(6, 182, 212, 0.1);
   --accent-border: rgba(6, 182, 212, 0.5);
 
-  --font-display: 'Bangers', cursive;
-  --font-body: 'Nunito', sans-serif;
+  --font-display: 'Bungee', cursive;
+  --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  font: 18px/145% var(--sans);
+  font: 18px/145% var(--font-body);
   letter-spacing: 0.18px;
   color-scheme: dark;
   color: var(--text);
@@ -58,7 +59,7 @@ body {
 
 h1,
 h2 {
-  font-family: var(--heading);
+  font-family: var(--font-display);
   font-weight: 500;
   color: var(--text-h);
 }
@@ -88,7 +89,7 @@ p {
 
 code,
 .counter {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   display: inline-flex;
   border-radius: 4px;
   color: var(--text-h);

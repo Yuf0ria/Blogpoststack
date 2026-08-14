@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 5000;
 // Routes
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/slides', require('./routes/slide'));
 
 app.get('/', (req, res) => res.send('Backend is running'));
 

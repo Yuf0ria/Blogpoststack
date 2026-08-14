@@ -108,7 +108,7 @@
 }
 
 .panel-number {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 2rem;
   opacity: 0.2;
   position: absolute;
@@ -157,7 +157,7 @@
 }
 
 .eyebrow {
-  font-family: var(--heading);
+  font-family: var(--font-display);
   font-size: 0.8rem;
   letter-spacing: 0.16em;
   display: block;
@@ -190,7 +190,7 @@
 
 .read-more {
   color: var(--accent);
-  font-family: var(--heading);
+  font-family: var(--font-display);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
 }
@@ -241,7 +241,7 @@
 }
 
 .portrait-caption {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   color: var(--text);
@@ -255,7 +255,7 @@
   right: 16px;
   background: var(--accent-tertiary);
   color: var(--bg);
-  font-family: var(--heading);
+  font-family: var(--font-display);
   font-size: 0.9rem;
   padding: 6px 12px;
   border: 2px solid var(--text-h);

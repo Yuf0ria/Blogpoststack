@@ -20,7 +20,7 @@
   background: var(--bg);
   color: var(--text-h);
   font-size: 15px;
-  font-family: var(--sans);
+  font-family: var(--font-body);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;

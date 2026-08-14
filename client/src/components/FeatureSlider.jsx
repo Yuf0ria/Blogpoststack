@@ -60,7 +60,8 @@ export default function FeatureSlider() {
       <div className="slider-content">
         <div className="slider-text">
           <div className="slide-badge" style={{ background: slide.accent }}>
-            {slide.type} — {slide.badge}
+            {/* {slide.type} — {slide.badge} */}
+            {slide.badge}
           </div>
           <h1 className="slide-title">{slide.title}</h1>
           <p className="slide-description">{slide.description}</p>
