@@ -94,7 +94,7 @@ Originally meant to be a blogpost built on MERN(mongoDB, Express, React, Node) +
 
 ### Built With
 
-[![Clouflare][Clouflare]][Cloudflare]
+[![Cloudflare][Cloudflare]][Cloudflare]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
