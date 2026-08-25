@@ -95,6 +95,27 @@ Originally meant to be a blogpost built on MERN(mongoDB, Express, React, Node) +
 ### Built With
 
 [![Cloudflare][Cloudflare]][Cloudflare]
+<!-- Database -->
+[![MongoDB][MongoDB]][MongoDB]
+<!-- Framework -->
+[![Express.js][Express.js]][Express.js]
+[![Node.js][Node.js]][Node.js]
+[![React][React]][React]
+[![React Native][React Native]][React Native]
+[![React Router][React Router]][React Router]
+<!-- package manager -->
+[![npm][npm]][npm]
+[![Yarn][Yarn]][Yarn]
+<!-- programming language -->
+[![CSS][CSS]][CSS]
+[![JavaScript][JavaScript]][JavaScript]
+[![JSON][JSON]][JSON]
+<!-- Special acknowledgement links -->
+[![Hostsinger][Hostsinger]][Hostsinger]
+<!-- code editors -->
+[![Rider][Rider]][Rider]
+[![VSCodium][VSCodium]][VSCodium]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -233,4 +254,25 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-url]: https://github.com/yuf0ria/blogpoststack/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
-[Cloudflare]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+<!-- Cloudsystem -->
+[Cloudflare]: https://img.shields.io/badge/Cloudflare-F38020?logo=Cloudflare&logoColor=white
+<!-- Database -->
+[MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white
+<!-- Framework -->
+[Express.js]: https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB
+[Node.js]: https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white
+[React]: https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB
+[React Native]: https://img.shields.io/badge/React_Native-%2320232a.svg?logo=react&logoColor=%2361DAFB
+[React Router]: https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white
+<!-- package manager -->
+[npm]: https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff
+[Yarn]: https://img.shields.io/badge/Yarn-2C8EBB?logo=yarn&logoColor=fff
+<!-- programming language -->
+[CSS]: https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff
+[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000
+[JSON]: https://img.shields.io/badge/JSON-000?logo=json&logoColor=fff
+<!-- Special acknowledgement links -->
+[Hostsinger]: https://img.shields.io/badge/Hostinger-673DE6?logo=hostinger&logoColor=fff
+<!-- code editors -->
+[Rider]: https://img.shields.io/badge/Rider-000?logo=rider&logoColor=fff
+[VSCodium]: https://img.shields.io/badge/VSCodium-2F80ED?logo=vscodium&logoColor=fff
