@@ -95,24 +95,18 @@ Originally meant to be a blogpost built on MERN(mongoDB, Express, React, Node) +
 ### Built With
 
 [![Cloudflare][Cloudflare]][Cloudflare]
-<!-- Database -->
 [![MongoDB][MongoDB]][MongoDB]
-<!-- Framework -->
 [![Express.js][Express.js]][Express.js]
 [![Node.js][Node.js]][Node.js]
 [![React][React]][React]
 [![React Native][React Native]][React Native]
 [![React Router][React Router]][React Router]
-<!-- package manager -->
 [![npm][npm]][npm]
 [![Yarn][Yarn]][Yarn]
-<!-- programming language -->
 [![CSS][CSS]][CSS]
 [![JavaScript][JavaScript]][JavaScript]
 [![JSON][JSON]][JSON]
-<!-- Special acknowledgement links -->
 [![Hostsinger][Hostsinger]][Hostsinger]
-<!-- code editors -->
 [![Rider][Rider]][Rider]
 [![VSCodium][VSCodium]][VSCodium]
 
