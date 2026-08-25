@@ -33,17 +33,19 @@
     <img src="images/Sprite-0001.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Suri's workshop</h3>
 
   <p align="center">
-    project_description
+    A website where I preview my work and ramble.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <!-- should open a google doc and link here -->
+    <a href="https://github.com/yuf0ria/blogpoststack"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <!-- Demo or websiteLink? -->
+    <a href="https://github.com/yuf0ria/blogpostack">View Site</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/yuf0ria/blogpoststack/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
