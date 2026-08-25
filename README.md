@@ -86,7 +86,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+Originally meant to be a blogpost built on MERN(mongoDB, Express, React, Node) + vite. I decided to expand and create a website where I can post guides, updates, announcements and most of all a roadmap of all my projects.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,9 +94,9 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
+[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
+[![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
