@@ -23,15 +23,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Yuf0ria/Blogpoststack">
+    <img src="images/Sprite-0001.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -237,7 +236,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-url]: https://github.com/yuf0ria/blogpoststack/issues
 [license-shield]: https://img.shields.io/github/license/yuf0ria/blogpoststack.svg?style=for-the-badge
 [license-url]: https://github.com/yuf0ria/blogpoststack/blob/master/LICENSE.txt
-[product-screenshot]: images/Sprite-0001.png.png
+[product-screenshot]: images/screenshot.png
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
