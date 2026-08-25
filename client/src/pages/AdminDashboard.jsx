@@ -8,7 +8,7 @@ export default function AdminDashboard() {
   const [section, setSection] = useState('posts') // 'posts' | 'slides'
   const [view, setView] = useState('list') // 'list' | 'create'
   const [form, setForm] = useState({ title: '', content: '' })
-  const [slideForm, setSlideForm] = useState({ title: '', description: '', tags: '', badge: '', linkTo: '/projects', order: 0 })
+  const [slideForm, setSlideForm] = useState({ title: '', description: '', tags: '', badge: '', linkTo: '/projects', order: 0, accentColor: '#06B6D4' })
   const [mediaFile, setMediaFile] = useState(null)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -86,6 +86,7 @@ export default function AdminDashboard() {
     fd.append('badge', slideForm.badge)
     fd.append('linkTo', slideForm.linkTo)
     fd.append('order', slideForm.order)
+    fd.append('accentColor', slideForm.accentColor)
     if (mediaFile) fd.append('media', mediaFile)
 
     const res = await fetch('/api/slides', {
@@ -94,7 +95,7 @@ export default function AdminDashboard() {
       body: fd
     })
     if (res.ok) {
-      setSlideForm({ title: '', description: '', tags: '', badge: '', linkTo: '/projects', order: 0 })
+      setSlideForm({ title: '', description: '', tags: '', badge: '', linkTo: '/projects', order: 0, accentColor: '#06B6D4' })
       setMediaFile(null)
       await fetchSlides()
       setView('list')
@@ -240,6 +241,17 @@ export default function AdminDashboard() {
                 value={slideForm.order}
                 onChange={e => setSlideForm({ ...slideForm, order: e.target.value })}
               />
+              <div className="color-picker-row">
+                <label className="color-swatch-wrapper" style={{ background: slideForm.accentColor }}>
+                  <input
+                    className="inputcolor"
+                    type="color"
+                    value={slideForm.accentColor}
+                    onChange={e => setSlideForm({ ...slideForm, accentColor: e.target.value })}
+                  />
+                </label>
+                <span className="color-preview-label">{slideForm.accentColor}</span>
+              </div>
               <input
                 type="file"
                 accept="image/*,video/*"

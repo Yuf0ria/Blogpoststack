@@ -11,7 +11,7 @@
   margin-bottom: 8px;
 }
 
-.create-form input,
+.create-form input:not([type="color"]),
 .create-form textarea {
   width: 100%;
   padding: 12px 14px;
@@ -41,5 +41,41 @@
 .auth-switch {
   font-size: 14px;
   text-align: center;
+  color: var(--text);
+}
+
+.color-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-swatch-wrapper {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-swatch-wrapper .inputcolor {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.color-preview-label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
   color: var(--text);
 }

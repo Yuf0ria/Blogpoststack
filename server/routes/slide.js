@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 // POST create — protected
 router.post('/', auth, upload.single('media'), async (req, res) => {
   try {
-    const { title, description, tags, badge, linkTo, order } = req.body;
+    const { title, description, tags, badge, linkTo, order, accentColor } = req.body;
     let mediaUrl = null;
 
     if (req.file) {
@@ -43,6 +43,7 @@ router.post('/', auth, upload.single('media'), async (req, res) => {
       mediaUrl,
       linkTo: linkTo || '/projects',
       order: Number(order) || 0,
+      accentColor: accentColor || '#06B6D4',
     });
     const saved = await slide.save();
     res.status(201).json(saved);
