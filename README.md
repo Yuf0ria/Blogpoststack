@@ -48,6 +48,8 @@
     <a href="https://github.com/yuf0ria/blogpoststack/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    &middot;
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Ask a question</a>
   </p>
 </div>
 
@@ -113,13 +115,14 @@ Originally meant to be a blogpost built on MERN(mongoDB, Express, React, Node) +
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+```Difficult level: intermediate to expert```
+Keep in mind: the main branch will always be the released version of the website. if you want to study the code and implementation, go ahead!
+
+This is an example of how you may setup up your project locally. some steps can get a bit confusing so if you have any questions you can <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">ask a question</a> or if you only want a template for the tech stack you can go to my template repository or other forks such as:
+
 
 ### Prerequisites
 

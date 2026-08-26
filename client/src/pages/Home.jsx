@@ -25,12 +25,12 @@ export default function Home() {
           </div>
           <Link to="/blog" className="btn-outline">ALL POSTS →</Link>
         </div>
-
+        {/* CONTENTS */}
         {posts.length === 0 && <p className="empty">No posts yet.</p>}
 
         <div className="post-grid">
           {posts.map(post => (
-            <Link key={post._id} to="/blog" className="post-card-link">
+            <Link key={post._id} to={`/blog/${post._id}`} className="post-card-link">
               <article className="post-card">
                 <p className="post-meta">
                   {new Date(post.createdAt).toLocaleDateString()}

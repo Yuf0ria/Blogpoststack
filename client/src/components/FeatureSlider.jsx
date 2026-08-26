@@ -13,10 +13,10 @@
 * DAIN 
 *____________________________________________________________
 * DATE UPDATED
-* Aug 25, 2026. 9:28 pm
+* Aug 26, 2026. 11:24 pm
 *____________________________________________________________
 *======================== ERRORS ============================
-* Line 57-66 - thumbnail not yet on backend.
+* N/A
 *____________________________________________________________
 * END OF LINE
 */
@@ -56,14 +56,13 @@ export default function FeatureSlider() {
     <section className="feature-slider" style={{ background: slide.accentColor }}>
       {/*_______________________
       * ABOUT slide.mediaUrl
-      * added for thumbnails of the video on background.
+      * gets the image and uses it as a background.
       * ________________________
       */}
       {slide.mediaUrl && (
         <div
           className="slide-bg-image"
-          // style={{ backgroundImage: `url(${getThumbnail(slide.mediaUrl)})` }}
-          /*this should be connected to a background, but I haven't added it on the backend so far. this will commented out for now */
+          style={{ backgroundImage: `url(${slide.mediaUrl})` }}
         />
       )}
       <div className="halftone-overlay" />
@@ -78,29 +77,33 @@ export default function FeatureSlider() {
           <p className="slide-description">{slide.description}</p>
           <div className="slide-tags">
             {slide.tags.map((tag) => (
-              <span key={tag} className="tag" style={{ color: slide.accent, borderColor: slide.accent }}>
+              <span 
+                key={tag} 
+                className="tag" 
+                style={{ color: slide.accent, borderColor: slide.accent }}>
                 {tag}
               </span>
             ))}
           </div>
           {/*_______________________
           * ABOUT LINK
-          * not connected to the routes
-          * ALTERNATES
-          * should not be limited to route links.
-          * should be able to include external links
-          * PRIORITY
-          * not my priority at the moment
+          * connected to internal and external links.
           * ________________________
           */}
-          <Link to="/projects" className="btn-outline">VIEW PROJECT →</Link>
+          {slide.linkType === 'external' ? (
+            <a href={slide.linkTo} target="_blank" rel="noopener noreferrer" className="btn-outline">
+              VIEW PROJECT →
+            </a>
+          ) : (
+            <Link to={slide.linkTo} className="btn-outline">
+              VIEW PROJECT →
+            </Link>
+          )}
         </div>
 
         <div className="slider-panel" style={{ borderColor: slide.accentColor }}>
           {slide.mediaUrl && (
-            slide.mediaUrl.match(/\.(mp4|webm|mov)$/i)
-              ? <video className="panel-media" src={slide.mediaUrl} autoPlay loop muted playsInline />
-              : <img className="panel-media" src={slide.mediaUrl} alt={slide.title} />
+            <img className="panel-media" src={slide.mediaUrl} alt={slide.title} />
           )}
         </div>
       </div>
@@ -110,7 +113,7 @@ export default function FeatureSlider() {
           <button
             key={i}
             className={i === current ? 'dot active' : 'dot'}
-            style={i === current ? { background: slide.accent, borderColor: slide.accent } : {}}
+            style={i === current ? { background: slide.accentColor, borderColor: slide.accentColor } : {}}
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}`}
           />

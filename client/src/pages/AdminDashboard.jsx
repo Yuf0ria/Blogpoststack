@@ -1,3 +1,28 @@
+/* 
+*____________________________________________________________
+*=================== ABOUT DASHBOARD ========================
+* THIS IS RELATED TO POSTING,CONNECTED TO THE BACKEND!
+*____________________________________________________________
+*======================= REMINDERS ==========================
+* It is important to make this file readable
+* more comments, the BETTER.
+*____________________________________________________________
+*========== HOW TO REPORT BUGS & ERROR NOT SOLVED ===========
+* Add a comment on the line referring to the element
+* include the referred comment on column bug reporting
+*____________________________________________________________
+*======================= AUTHOR/s ===========================
+* DAIN 
+*____________________________________________________________
+* DATE UPDATED
+* Aug 26, 2026. 12:19 pm
+*____________________________________________________________
+*======================== ERRORS ============================
+* N/A
+*____________________________________________________________
+* END OF LINE
+*/
+
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Editor from '../components/Editor'
@@ -230,11 +255,30 @@ export default function AdminDashboard() {
                 value={slideForm.badge}
                 onChange={e => setSlideForm({ ...slideForm, badge: e.target.value })}
               />
-              <input
-                placeholder="Link to (e.g. /projects)"
-                value={slideForm.linkTo}
-                onChange={e => setSlideForm({ ...slideForm, linkTo: e.target.value })}
-              />
+              {slideForm.linkType === 'internal' && (
+                <>
+                  <select
+                    value={slideForm.linkTo}
+                    onChange={e => setSlideForm({ ...slideForm, linkTo: e.target.value })}
+                  >
+                    <option value="/projects">Projects page</option>
+                    <option value="/about">About page</option>
+                    <option value="/inquire">Inquire page</option>
+                    {posts.map(post => (
+                      <option key={post._id} value={`/blog/${post._id}`}>
+                        Post: {post.title}
+                      </option>
+                    ))}
+                  </select>
+                </>
+              )}
+              {slideForm.linkType === 'external' && (
+                <input
+                  placeholder="https://example.com"
+                  value={slideForm.linkTo}
+                  onChange={e => setSlideForm({ ...slideForm, linkTo: e.target.value })}
+                />
+              )}
               <input
                 type="number"
                 placeholder="Order (0, 1, 2...)"

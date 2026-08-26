@@ -6,6 +6,7 @@ const slideSchema = new mongoose.Schema({
   tags: [{ type: String, maxlength: 30 }],
   badge: { type: String, maxlength: 50 },// e.g. "ISSUE 3 OUT"
   mediaUrl: { type: String, default: null },// video/gif from R2
+  linkType: { type: String, enum: ['internal', 'external'], default: 'internal' },
   linkTo: { type: String, default: '/projects' },// where "VIEW PROJECT" goes
   order: { type: Number, default: 0 },// controls slide sequence
   accentColor: { type: String, default: '#06B6D4' },
