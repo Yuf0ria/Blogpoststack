@@ -18,7 +18,7 @@
 * Aug 26, 2026. 12:19 pm
 *____________________________________________________________
 *======================== ERRORS ============================
-* N/A
+* line 197 - exactly an error but more lack of UI.
 *____________________________________________________________
 * END OF LINE
 */
@@ -33,7 +33,7 @@ export default function AdminDashboard() {
   const [section, setSection] = useState('posts') // 'posts' | 'slides'
   const [view, setView] = useState('list') // 'list' | 'create'
   const [form, setForm] = useState({ title: '', content: '' })
-  const [slideForm, setSlideForm] = useState({ title: '', description: '', tags: '', badge: '', linkTo: '/projects', order: 0, accentColor: '#06B6D4' })
+  const [slideForm, setSlideForm] = useState({ title: '', description: '', tags: '', badge: '', linkType: 'internal', linkType: 'external', linkTo: '/projects', order: 0, accentColor: '#06B6D4' })
   const [mediaFile, setMediaFile] = useState(null)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -194,6 +194,7 @@ export default function AdminDashboard() {
                 value={form.title}
                 onChange={e => setForm({ ...form, title: e.target.value })}
               />
+              {/* no border and the gap is too small to notice where it is. */}
               <Editor content={form.content} onChange={(html) => setForm({ ...form, content: html })} />
               <div className="form-actions">
                 <button className="btn-secondary" onClick={() => setView('list')}>Cancel</button>

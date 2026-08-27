@@ -7,8 +7,6 @@ export default function AboutSection() {
         <div className="about-portrait-wrap">
           <div className="about-portrait">
             <div className="halftone-overlay" />
-            <div className="portrait-initial">ME</div>
-            <div className="portrait-caption">ARTIST / DEV / STORYTELLER</div>
             <div className="speech-bubble">HEY!</div>
           </div>
             <div className="color-strip">
@@ -28,13 +26,12 @@ export default function AboutSection() {
             AND PANELS.
           </h2>
           <p>
-            I'm a multidisciplinary creator working at the intersection of code, illustration, and
-            sequential art. Every project starts with the same question:{' '}
+            I'm a creator in all sorts of branches, coding and making art both bring me joy. Every project starts with the same question:{' '}
             <em className="highlight-yellow">"What would make someone stop scrolling?"</em>
           </p>
           <p>
             Based online. Open to commissions, collaborations, and projects that push the limits of
-            what one person can build. PS. THIS TEXT IS NOT AI, I JUST WRITE LIKE THISDJHAGHGAD.
+            what one person can build.
           </p>
           <div className="about-actions">
             <Link to="/projects" className="btn-cyan">SEE MY WORK</Link>

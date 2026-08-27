@@ -117,7 +117,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* no blur, no opacity reduction — this is the crisp real image */
 }
 .slider-dots {
   display: flex;
@@ -233,23 +232,6 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-}
-
-.portrait-initial {
-  font-size: 4rem;
-  color: var(--accent);
-  opacity: 0.3;
-  position: relative;
-  z-index: 2;
-}
-
-.portrait-caption {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  color: var(--text);
-  position: relative;
-  z-index: 2;
 }
 
 .speech-bubble {
