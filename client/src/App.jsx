@@ -15,7 +15,6 @@ import AdminDashboard from './pages/AdminDashboard'
 function App() {
   return (
     <>
-      {/* NAVBAR SHOULD ALWAYS BE VISIBLE */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

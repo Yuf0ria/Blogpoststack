@@ -7,7 +7,6 @@ const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const r2 = require('../config/r2');
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 } });
 
-// GET all posts — public
 router.get('/', async (req, res) => {
   try {
     const posts = await Post.find().sort({ createdAt: -1 });
@@ -17,7 +16,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET single post — public
 router.get('/:id', async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -28,14 +26,13 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// POST create — protected
 router.post('/', auth, async (req, res) => {
   const { title, content } = req.body;
   try {
     const post = new Post({
       title,
       content,
-      author: req.user.username // pulled from JWT, not user input
+      author: req.user.username 
     });
     const saved = await post.save();
     res.status(201).json(saved);
@@ -44,7 +41,6 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
-// POST /api/posts/upload-image — protected, used by the editor for inline images
 router.post('/upload-image', auth, upload.single('image'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ message: 'No file provided' });
@@ -63,7 +59,6 @@ router.post('/upload-image', auth, upload.single('image'), async (req, res) => {
   }
 });
 
-// DELETE — protected
 router.delete('/:id', auth, async (req, res) => {
   try {
     await Post.findByIdAndDelete(req.params.id);

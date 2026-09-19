@@ -8,8 +8,6 @@ const r2 = require('../config/r2');
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } }); // 10MB, thumbnails only
 
-// GET all projects — public. ?category=dev or ?category=comic filters; omit for all.
-// Sorted by year desc (newest timeline entries first), then order within a year.
 router.get('/', async (req, res) => {
   try {
     const filter = {};
@@ -22,7 +20,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST create — protected
 router.post('/', auth, upload.single('thumbnail'), async (req, res) => {
   try {
     const { title, description, category, year, linkTo, linkType, order } = req.body;
@@ -56,7 +53,6 @@ router.post('/', auth, upload.single('thumbnail'), async (req, res) => {
   }
 });
 
-// DELETE — protected
 router.delete('/:id', auth, async (req, res) => {
   try {
     await Project.findByIdAndDelete(req.params.id);

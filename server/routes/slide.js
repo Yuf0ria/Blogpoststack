@@ -6,9 +6,8 @@ const multer = require('multer');
 const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const r2 = require('../config/r2');
 
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 15 * 1024 * 1024 } }); // 15MB — video/gif needs more room than a photo
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 15 * 1024 * 1024 } }); // 15MB
 
-// GET all slides — public, ordered
 router.get('/', async (req, res) => {
   try {
     const slides = await Slide.find().sort({ order: 1 });
@@ -18,7 +17,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST create — protected
 router.post('/', auth, upload.single('media'), async (req, res) => {
   try {
     const { title, description, tags, badge, linkTo, linkType, order, accentColor } = req.body;
@@ -53,7 +51,6 @@ router.post('/', auth, upload.single('media'), async (req, res) => {
   }
 });
 
-// DELETE — protected
 router.delete('/:id', auth, async (req, res) => {
   try {
     await Slide.findByIdAndDelete(req.params.id);

@@ -8,14 +8,13 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173"], //reminding myself to put my domain name here aifsgsgh
   credentials: true
 }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-// Routes
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/slides', require('./routes/slide'));
