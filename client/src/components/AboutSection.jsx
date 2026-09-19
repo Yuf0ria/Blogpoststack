@@ -29,7 +29,7 @@ export default function AboutSection() {
           <div className="about-actions"> 
             {/* I should make this into tab */}
             <Link to="/projects" className="btn-cyan">"OH LOOK, PROJECTS!"</Link>
-            <Link to="/Commission" className="btn-outline">"Are you open for commissinons?"</Link>
+            <Link to="/Commission" className="btn-outline">"COMMISSION STATUS: OPEN"</Link>
           </div>
         </div>
       </div>

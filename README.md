@@ -171,10 +171,20 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] NAVBAR DESIGNED
+  - [ ] MOBILE HAMBURGER
+- [ ] PROJECT TAB CONTENT
+  - [ ] Current Year Section
+    - [ ] Series
+    - [ ] Portfolio
+    - [ ] Published Games
+  - [ ] Archived Years Section
+    - [ ] Timeline Section (Summary of the Year)
+      - [ ] Archived Portfolio
+- [ ] COMMISSION TAB CONTENT
+  - [ ] PERSONAL PROJECT SELECTION
+  - [ ] COMMERCIAL PROJECT SELECTION
+- [ ] SITE UP BEFORE OCTOBER 2026
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
