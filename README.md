@@ -184,7 +184,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] COMMISSION TAB CONTENT
   - [ ] PERSONAL PROJECT SELECTION
   - [ ] COMMERCIAL PROJECT SELECTION
-- [ ] SITE UP BEFORE OCTOBER 2026
+- [ ] DEPLOY ON CLOUDFLARE PAGES
+- [ ] DEPLOY ON RAILWAY/ALTs
+- [ ] SITE UP BEFORE END OF OCTOBER 2026
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
