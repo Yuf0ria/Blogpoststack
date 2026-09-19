@@ -66,7 +66,7 @@ export default function AdminDashboard() {
     navigate('/admin/login')
   }
 
-  // ── Posts ──────────────────────────────────────────
+  //post
   const handleSubmit = async () => {
     if (!form.title.trim() || !form.content.trim()) {
       setError('Title and content are required.')
@@ -95,7 +95,7 @@ export default function AdminDashboard() {
     await fetchPosts()
   }
 
-  // ── Slides ─────────────────────────────────────────
+  //slides
   const handleSlideSubmit = async () => {
     if (!slideForm.title.trim() || !slideForm.description.trim()) {
       setError('Title and description are required.')

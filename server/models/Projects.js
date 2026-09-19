@@ -11,7 +11,7 @@ const projectSchema = new mongoose.Schema({
   order: { type: Number, default: 0 }, // controls position within the same year
 }, { timestamps: true });
  
-module.exports = mongoose.model('Project', projectSchema);
+module.exports = mongoose.model('Portfolio', projectSchema);
  
 
 

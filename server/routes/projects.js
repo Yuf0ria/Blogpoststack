@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Project = require('../models/Project');
+const Project = require('../models/Projects');
 const auth = require('../midware/adminAuth');
 const multer = require('multer');
 const { PutObjectCommand } = require('@aws-sdk/client-s3');

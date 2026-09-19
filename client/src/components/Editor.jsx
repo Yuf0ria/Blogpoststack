@@ -26,7 +26,7 @@ export default function Editor({ content, onChange }) {
     editorProps: {
       handleDrop: (view, event) => {
         const file = event.dataTransfer?.files?.[0]
-        if (!file || !file.type.startsWith('image/')) return false // let default behavior handle non-images
+        if (!file || !file.type.startsWith('image/')) return false 
 
         event.preventDefault()
         uploadImage(file).then((url) => {
@@ -35,7 +35,7 @@ export default function Editor({ content, onChange }) {
           const transaction = view.state.tr.insert(view.state.selection.from, node)
           view.dispatch(transaction)
         })
-        return true // tells ProseMirror: handled, don't do anything else
+        return true
       },
     },
   })

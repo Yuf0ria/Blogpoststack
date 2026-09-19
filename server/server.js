@@ -21,6 +21,14 @@ app.use('/api/slides', require('./routes/slide'));
 app.use('/api/projects', require('./routes/projects'));
 
 app.get('/', (req, res) => res.send('Backend is running'));
+app.get('/api/health', async (req, res) => {
+  try {
+    await mongoose.connection.db.admin().ping();
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ ok: false });
+  }
+});
 
 mongoose
   .connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 5000 })

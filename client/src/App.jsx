@@ -6,7 +6,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
-import Inquire from './pages/Inquire'
 import Commission from './pages/Commission'
 //backend tabs
 import AdminLogin from './pages/AdminLogin'
@@ -21,7 +20,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<Blog />} />
-        <Route path="/Inquire" element={<Inquire />} />
+        <Route path="/Commission" element={<Commission />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="*" element={<Navigate to="/" />} />
