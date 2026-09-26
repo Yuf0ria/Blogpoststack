@@ -1,37 +1,9 @@
-/* 
-*____________________________________________________________
-*===================== RELATED FILES ========================
-* client/pages/AdminDasboard.jsx
-* server/routes/slide.js
-* server/models/Slide.js
-*____________________________________________________________
-*========== HOW TO REPORT BUGS & ERROR NOT SOLVED ===========
-* Add a comment on the line referring to the element
-* include the referred comment on column bug reporting
-*____________________________________________________________
-*======================= AUTHOR/s ===========================
-* DAIN 
-*____________________________________________________________
-* DATE UPDATED
-* Aug 26, 2026. 11:24 pm
-*____________________________________________________________
-*======================== ERRORS ============================
-* N/A
-*____________________________________________________________
-* END OF LINE
-*/
-
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function FeatureSlider() {
-  //States
   const [slides, setSlides] = useState([])
   const [current, setCurrent] = useState(0)
-  const currentRef = useRef(current)
-  currentRef.current = current
-  //Effects
-  //Fetching from backend
   useEffect(() => {
     fetch('/api/slides')
       .then(r => r.json())
@@ -39,9 +11,8 @@ export default function FeatureSlider() {
   }, [])
   //Counts up to 5 seconds, then slides to the next feature
   useEffect(() => {
-    if (slides.length === 0) return
     const id = setInterval(() => {
-      setCurrent((currentRef.current + 1) % slides.length)
+      setCurrent(c => (c + 1) % slides.length)
     }, 5000)
     return () => clearInterval(id)
   }, [slides])
@@ -54,11 +25,7 @@ export default function FeatureSlider() {
 
   return (
     <section className="feature-slider" style={{ background: slide.accentColor }}>
-      {/*_______________________
-      * ABOUT slide.mediaUrl
-      * gets the image and uses it as a background.
-      * ________________________
-      */}
+
       {slide.mediaUrl && (
         <div
           className="slide-bg-image"
@@ -80,16 +47,11 @@ export default function FeatureSlider() {
               <span 
                 key={tag} 
                 className="tag" 
-                style={{ color: slide.accent, borderColor: slide.accent }}>
+                style={{ color: slide.accentColor, borderColor: slide.accentColor }}>
                 {tag}
               </span>
             ))}
           </div>
-          {/*_______________________
-          * ABOUT LINK
-          * connected to internal and external links.
-          * ________________________
-          */}
           {slide.linkType === 'external' ? (
             <a href={slide.linkTo} target="_blank" rel="noopener noreferrer" className="btn-outline">
               VIEW PROJECT →

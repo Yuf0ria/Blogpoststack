@@ -139,7 +139,7 @@ export default function AdminDashboard() {
   return (
     <div className="blog-app">
       <header className="blog-header">
-        <h1>⚙️ Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
         <div className="header-actions">
           <span className="welcome">Hi, {username}</span>
           <button className="btn-secondary" onClick={handleLogout}>Logout</button>

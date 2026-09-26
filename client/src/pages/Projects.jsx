@@ -7,7 +7,6 @@ export default function Projects (){
             ----
             Portfolio
             ----
-            Published Games
         </main>
     )
 }
