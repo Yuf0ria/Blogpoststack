@@ -1,6 +1,5 @@
 .blog-app {
-  max-width: 760px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 24px 64px;
 }
 
@@ -20,6 +19,7 @@
 
 .post-list {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
   gap: 20px;
 }

@@ -28,9 +28,9 @@ export default function Blog() {
 
   if (activePost) return (
     <div className="blog-app">
-      <header className="blog-header">
+      {/* <header className="blog-header">
         <h1 onClick={goBack} style={{ cursor: 'pointer' }}>Blog</h1>
-      </header>
+      </header> */}
       <main className="post-full">
         <button className="btn-back" onClick={goBack}>← return</button>
         <h2>{activePost.title}</h2>
@@ -45,9 +45,9 @@ export default function Blog() {
 
   return (
     <div className="blog-app">
-      <header className="blog-header">
+      {/* <header className="blog-header">
         <h1>Blog</h1>
-      </header>
+      </header> */}
       <main className="post-list">
         {posts.length === 0 && <p className="empty">No posts yet.</p>}
         {posts.map(post => {
