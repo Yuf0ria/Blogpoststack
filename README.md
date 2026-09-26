@@ -171,7 +171,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [*] NAVBAR DESIGNED
+- [x] NAVBAR DESIGNED
   - [ ] MOBILE HAMBURGER
 - [ ] PROJECT TAB CONTENT
   - [ ] Series
