@@ -2,40 +2,40 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function AdminLogin() {
-  const [form, setForm] = useState({ username: '', password: '' })
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const navigate = useNavigate()
+  const [form, setForm] = useState({ username: '', password: '' }),
+    [error, setError] = useState(''),
+    [loading, setLoading] = useState(false),
+    navigate = useNavigate(),
 
-  const handleLogin = async () => {
-    if (!form.username.trim() || !form.password.trim()) {
-      setError('Both fields are required.')
-      return
-    }
-    setLoading(true)
-    setError('')
-    try {
-      const res = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
-      })
-      const data = await res.json()
-      if (res.ok && data.role === 'admin') {
-        localStorage.setItem('token', data.token)
-        localStorage.setItem('username', data.username)
-        navigate('/admin')
-      } else if (res.ok && data.role !== 'admin') {
-        setError('You do not have admin access.')
-      } else {
-        setError(data.message || 'Login failed.')
+    handleLogin = async () => {
+      if (!form.username.trim() || !form.password.trim()) {
+        setError('Both fields are required.')
+        return
       }
-    } catch (err) {
-      setError('Something went wrong: ' + err.message)
-    } finally {
-      setLoading(false)
-    }
-}
+      setLoading(true)
+      setError('')
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form)
+        })
+        const data = await res.json()
+        if (res.ok && data.role === 'admin') {
+          localStorage.setItem('token', data.token)
+          localStorage.setItem('username', data.username)
+          navigate('/admin')
+        } else if (res.ok && data.role !== 'admin') {
+          setError('You do not have admin access.')
+        } else {
+          setError(data.message || 'Login failed.')
+        }
+      } catch (err) {
+        setError('error: ' + err.message)
+      } finally {
+        setLoading(false)
+      }
+  }
   
   console.log('form state:', form)
 

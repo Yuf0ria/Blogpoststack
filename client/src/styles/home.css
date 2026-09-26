@@ -224,7 +224,7 @@
   max-width: 320px;
   aspect-ratio: 4 / 5;
   border: 3px solid var(--text-h);
-  border-radius: 8px;
+  border-radius: 2px;
   background: var(--code-bg);
   display: flex;
   flex-direction: column;
@@ -273,7 +273,32 @@
 
 .about-actions {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 10px;
 }
+
+.about-tab{
+  padding: 10px;
+  border-style:solid;
+  border-width: 1px;
+  border-color:aliceblue;
+  border-radius: 1px;
+}
+
+.about-tab:hover, .about-tab::after{
+  color:var(--accent-tertiary);
+  border-color: var(--accent-secondary);
+}
+
+.tabSlider{
+  padding: 10px;
+  border-style:solid;
+  border-width: 2px;
+}
+
+.tabSlider:hover, .tabSlider::after{
+  color:var(--border);
+  border-color: var(--border);
+  border-width:2px;
+}
+

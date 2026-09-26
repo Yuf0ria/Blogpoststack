@@ -7,7 +7,7 @@ export default function AboutSection() {
         <div className="about-portrait-wrap">
           <div className="about-portrait">
             <div className="halftone-overlay" />
-            <div className="speech-bubble">HEY!</div>
+            <div className="speech-bubble">I'm Dain!</div>
           </div>
             <div className="color-strip">
                 <span style={{ background: 'var(--accent)' }} />
@@ -22,14 +22,13 @@ export default function AboutSection() {
             FOR<span className="highlight-cyan"> HUMAN </span>ART.
           </h2>
           <p>
-            I'm dain, I pursued a degree in game development for 4 years and one day, I said to myself:<br/>
+            I went on side as a programmer for 4 years and one day, I said to myself:<br/>
             <em className="highlight-yellow">"all this coding is just making me itch to draw."</em> <br/>
-            So after all the side questing, I've finally gotten back on the main track: <em className="highlight-yellow">Making Art!</em>
+            So after changing job careers, I've finally gotten back on the main track: <em className="highlight-yellow">Making Art!</em>
           </p>
           <div className="about-actions"> 
-            {/* I should make this into tab */}
-            <Link to="/projects" className="btn-cyan">"OH LOOK, PROJECTS!"</Link>
-            <Link to="/Commission" className="btn-outline">"COMMISSION STATUS: OPEN"</Link>
+            <Link to="/projects" className="btn-cyan about-tab">ARTWORK</Link>
+            <Link to="/Commission" className="btn-outline about-tab">COMMISSION:TBA</Link>
           </div>
         </div>
       </div>

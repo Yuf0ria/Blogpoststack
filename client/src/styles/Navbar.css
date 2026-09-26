@@ -1,4 +1,4 @@
-.navbar {
+nav {
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -10,7 +10,7 @@
   letter-spacing: 1.5px;
 }
 
-.navbar a {
+nav a {
   color: var(--text);
   text-decoration: none;
   font-size: 14px;
@@ -18,11 +18,11 @@
   position: relative;
 }
 
-.navbar a.active {
+nav a.active{
   color: var(--accent);
 }
 
-.navbar a.active::after {
+nav a.active::after {
   content: '';
   position: absolute;
   left: 0;

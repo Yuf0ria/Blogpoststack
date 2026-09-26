@@ -1,9 +1,9 @@
-const rateLimit = require('express-rate-limit');
-const express = require('express');
-const router = express.Router();
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const rateLimit = require('express-rate-limit'),
+  express = require('express'),
+  router = express.Router(),
+  bcrypt = require('bcryptjs'),
+  jwt = require('jsonwebtoken'),
+  User = require('../models/User');
 
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

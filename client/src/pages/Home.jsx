@@ -20,7 +20,7 @@ export default function Home() {
       <section className="recent-updates">
         <div className="section-heading-row">
           <div>
-            <span className="eyebrow" style={{ color: '#FBBF24' }}>★ FROM THE DESK</span>
+            <span className="eyebrow" style={{ color: '#FBBF24' }}>★ FROM THE BLOG</span>
             <h2 className="section-heading">RECENT UPDATES</h2>
           </div>
           <Link to="/blog" className="btn-outline">ALL POSTS →</Link>

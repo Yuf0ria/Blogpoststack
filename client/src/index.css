@@ -5,6 +5,7 @@
 @import './styles/blog.css'; 
 @import './styles/Navbar.css'; 
 @import './styles/home.css';
+@import './styles/admin.css';
 
 
 :root {

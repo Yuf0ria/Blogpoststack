@@ -2,31 +2,26 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 export default function Blog() {
-  const [posts, setPosts] = useState([])
-  const [activePost, setActivePost] = useState(null)
-  const { id } = useParams()
-  const navigate = useNavigate()
-
-  //FETCHES
+  const [posts, setPosts] = useState([]),
+    [activePost, setActivePost] = useState(null),
+    { id } = useParams(),
+    navigate = useNavigate()
   useEffect(() => {
     fetch('/api/posts')
       .then(r => r.json())
       .then(setPosts)
   }, [])
-  //finds id for links
   useEffect(() => {
     if (id && posts.length > 0) {
       const found = posts.find(p => p._id === id)
       if (found) setActivePost(found)
     }
   }, [id, posts])
-  //variable for opening
   const openPost = (post) => {
     setActivePost(post)
     navigate(`/blog/${post._id}`)
-  }
-  //constantObj name var says it all lol.
-  const goBack = () => {
+  },
+  goBack = () => {
     setActivePost(null)
     navigate('/blog')
   }

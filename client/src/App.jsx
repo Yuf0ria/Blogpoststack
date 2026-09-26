@@ -1,13 +1,10 @@
-//FOR ROUTING
 import './index.css'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
-//main tabs
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import Commission from './pages/Commission'
-//backend tabs
 import AdminLogin from './pages/AdminLogin'
 import AdminDashboard from './pages/AdminDashboard'
 
