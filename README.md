@@ -171,16 +171,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] NAVBAR DESIGNED
+- [*] NAVBAR DESIGNED
   - [ ] MOBILE HAMBURGER
 - [ ] PROJECT TAB CONTENT
-  - [ ] Current Year Section
-    - [ ] Series
-    - [ ] Portfolio
-    - [ ] Published Games
-  - [ ] Archived Years Section
-    - [ ] Timeline Section (Summary of the Year)
-      - [ ] Archived Portfolio
+  - [ ] Series
+  - [ ] Portfolio
+  - [ ] Published Games
 - [ ] COMMISSION TAB CONTENT
   - [ ] PERSONAL PROJECT SELECTION
   - [ ] COMMERCIAL PROJECT SELECTION
