@@ -34,7 +34,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="admin">
-      <header className="blog-header">
+      <header className="admin-header">
         <h1>Admin Dashboard</h1><br/>
         <div className="header-actions">
           <button className="btn-secondary" onClick={handleLogout}>Logout</button>
