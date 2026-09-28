@@ -172,7 +172,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [x] NAVBAR DESIGNED
-  - [ ] MOBILE HAMBURGER
+  - [x] MOBILE HAMBURGER
 - [ ] PROJECT TAB CONTENT
   - [ ] Series
   - [ ] Portfolio
