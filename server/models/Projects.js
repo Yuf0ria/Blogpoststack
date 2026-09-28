@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const projectSchema = new mongoose.Schema({
   title: { type: String, required: true, maxlength: 100 },
   description: { type: String, required: true, maxlength: 1000 },
-  category: { type: String, enum: ['dev', 'comic'], required: true }, // which timeline this shows up in
+  category: { type: String, enum: ['portfolio', 'comics', 'games'], required: true },
   year: { type: Number, required: true }, // groups projects under a year on the timeline
   thumbnailUrl: { type: String, default: null }, // R2 image, same pattern as Slide.mediaUrl
   linkType: { type: String, enum: ['internal', 'external'], default: 'external' },

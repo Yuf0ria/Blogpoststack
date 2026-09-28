@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export default function AboutSection() {
   return (
@@ -26,9 +29,22 @@ export default function AboutSection() {
             <em className="highlight-yellow">"all this coding is just making me itch to draw."</em> <br/>
             So after changing job careers, I've finally gotten back on the main track: <em className="highlight-yellow">Making Art!</em>
           </p>
-          <div className="about-actions"> 
-            <Link to="/projects" className="btn-cyan about-tab">ARTWORK</Link>
-            <Link to="/Commission" className="btn-outline about-tab">COMMISSION:TBA</Link>
+          <div className="about-actions">
+            <Link to="/projects" className="comic-btn comic-btn--cyan">
+              <FontAwesomeIcon icon={faPalette} /> ARTWORK
+            </Link>
+            <Link to="/commission" className="comic-btn comic-btn--magenta">
+              <FontAwesomeIcon icon={faPaintBrush} /> COMMISSION: TBA
+            </Link>
+          </div>
+
+          <div className="about-socials">
+            <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="mailto:YOUR@EMAIL.COM" aria-label="Email" className="social-icon">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
           </div>
         </div>
       </div>

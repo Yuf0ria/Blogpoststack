@@ -53,11 +53,11 @@ export default function FeatureSlider() {
             ))}
           </div>
           {slide.linkType === 'external' ? (
-            <a href={slide.linkTo} target="_blank" rel="noopener noreferrer" className="btn-outline tabSlider">
+            <a href={slide.linkTo} target="_blank" rel="noopener noreferrer" className="comic-btn slide-btn">
               GO TO PROJECT
             </a>
           ) : (
-            <Link to={slide.linkTo} className="btn-outline tabSlider">
+            <Link to={slide.linkTo} className="comic-btn slide-btn">
               GO TO PROJECT
             </Link>
           )}
