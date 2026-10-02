@@ -51,18 +51,19 @@
 
 .slider-text {
   color: var(--text-h);
+  text-align: left;
 }
 
 .slide-badge {
   display: inline-block;
-  color: var(--neutral, #18181B);
-  font-size: 0.8rem;
+  color: var(--bg);
+  font-size: 1.2rem;
   letter-spacing: 0.14em;
   padding: 4px 14px;
   margin-bottom: 16px;
-  border: 2px solid var(--neutral, #18181B);
+  border: 2px solid var(--bg);
   font-family: var(--font-display);
-  border-radius: 2px;
+  background: var(--text)!important;
 }
 
 .slide-title {
@@ -78,31 +79,6 @@
   max-width: 400px;
   margin-bottom: 24px;
   line-height: 1.7;
-}
-
-.slide-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-
-.tag {
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 3px 10px;
-  font-size: 0.75rem;
-  font-family: var(--mono);
-  letter-spacing: 0.05em;
-}
-
-.slide-btn{
-  --shadow-color: var(--bg)!important;
-  border-color: var(--bg)!important;
-  color: var(--bg)!important;
-  padding: 6px 14px!important;
-  margin-right: auto!important;
-  border: 2px solid !important;
 }
 
 .slider-panel {
@@ -282,59 +258,4 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
-}
-
-.comic-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  color: var(--bg);
-  border: 3px solid var(--text-h);
-  border-radius: 2px;
-  box-shadow: 4px 4px 0 var(--text-h);
-  transition: transform 0.1s, box-shadow 0.1s;
-  margin: 0 12px 12px 0;
-}
-
-.comic-btn--cyan    { background: var(--accent); }
-.comic-btn--magenta { background: var(--accent-secondary); }
-
-.comic-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--text-h);
-}
-
-.comic-btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 var(--text-h);
-}
-
-.about-socials {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.social-icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  font-size: 1.25rem;
-  color: var(--text-h);
-  border: 3px solid var(--text-h);
-  border-radius: 2px;
-  box-shadow: 3px 3px 0 var(--accent-tertiary);
-  transition: transform 0.1s, box-shadow 0.1s, color 0.1s;
-}
-
-.social-icon:hover {
-  color: var(--accent-tertiary);
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--accent-tertiary);
 }

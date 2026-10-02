@@ -7,10 +7,10 @@ export default function SlideManager({ token }) {
         [slideForm, setSlideForm] = useState({
             title: '',
             description: '',
-            tags: '',
             badge: '',
             linkType: 'internal',
             linkTo: '/projects',
+            linkLabel: '',
             order: 0,
             accentColor: '#06B6D4',
         }),
@@ -41,10 +41,10 @@ export default function SlideManager({ token }) {
     const fd = new FormData()
     fd.append('title', slideForm.title)
     fd.append('description', slideForm.description)
-    fd.append('tags', slideForm.tags)
     fd.append('badge', slideForm.badge)
     fd.append('linkType', slideForm.linkType)
     fd.append('linkTo', slideForm.linkTo)
+    fd.append('linkLabel', slideForm.linkLabel)
     fd.append('order', slideForm.order)
     fd.append('accentColor', slideForm.accentColor)
     if (mediaFile) fd.append('media', mediaFile)
@@ -55,7 +55,7 @@ export default function SlideManager({ token }) {
       body: fd
     })
     if (res.ok) {
-      setSlideForm({ title: '', description: '', tags: '', badge: '', linkType: 'internal', linkTo: '/projects', order: 0, accentColor: '#06B6D4' })
+      setSlideForm({ title: '', description: '', badge: '', linkType: 'internal', linkTo: '/projects', linkLabel: '', order: 0, accentColor: '#06B6D4' })
       setMediaFile(null)
       await fetchSlides()
       setView('list')
@@ -111,11 +111,6 @@ export default function SlideManager({ token }) {
             onChange={e => setSlideForm({ ...slideForm, description: e.target.value })}
           />
           <input
-            placeholder="Tags, comma separated (e.g. Sci-Fi, Ongoing, 3 Issues)"
-            value={slideForm.tags}
-            onChange={e => setSlideForm({ ...slideForm, tags: e.target.value })}
-          />
-          <input
             placeholder="Badge (e.g. ISSUE 3 OUT)"
             value={slideForm.badge}
             onChange={e => setSlideForm({ ...slideForm, badge: e.target.value })}
@@ -152,6 +147,13 @@ export default function SlideManager({ token }) {
               onChange={e => setSlideForm({ ...slideForm, linkTo: e.target.value })}
             />
           )}
+
+          <input
+            placeholder="Button label (e.g. GO TO GITHUB). Leave blank for default"
+            maxLength={30}
+            value={slideForm.linkLabel}
+            onChange={e => setSlideForm({ ...slideForm, linkLabel: e.target.value })}
+          />
 
           <input
             type="number"

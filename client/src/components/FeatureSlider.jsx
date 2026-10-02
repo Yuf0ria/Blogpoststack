@@ -19,10 +19,11 @@ export default function FeatureSlider() {
   if (slides.length === 0) return null
 
   const slide = slides[current],
+  buttontext = slide.linkLabel || 'GO TO PROJECT',
   goTo = (index) => setCurrent(index);
 
   return (
-    <section className="feature-slider" style={{ background: slide.accentColor }}>
+    <section className="feature-slider" style={{ background: slide.accentColor}}>
       {slide.mediaUrl && (
         <div
           className="slide-bg-image"
@@ -42,23 +43,13 @@ export default function FeatureSlider() {
           </div>
           <h1 className="slide-title">{slide.title}</h1>
           <p className="slide-description">{slide.description}</p>
-          <div className="slide-tags">
-            {slide.tags.map((tag) => (
-              <span 
-                key={tag} 
-                className="tag" 
-                style={{borderColor: slide.accentColor }}>
-                {tag}
-              </span>
-            ))}
-          </div>
           {slide.linkType === 'external' ? (
             <a href={slide.linkTo} target="_blank" rel="noopener noreferrer" className="comic-btn slide-btn">
-              GO TO PROJECT
+              {buttontext}
             </a>
           ) : (
             <Link to={slide.linkTo} className="comic-btn slide-btn">
-              GO TO PROJECT
+              {buttontext}
             </Link>
           )}
         </div>

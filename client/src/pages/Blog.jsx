@@ -32,7 +32,7 @@ export default function Blog() {
         <h1 onClick={goBack} style={{ cursor: 'pointer' }}>Blog</h1>
       </header> */}
       <main className="post-full">
-        <button className="btn-back" onClick={goBack}>← return</button>
+        <button className="comic-btn blog-ver" onClick={goBack}>← return</button>
         <h2>{activePost.title}</h2>
         {activePost.imageUrl && <img src={activePost.imageUrl} alt={activePost.title} className="post-image" />}
         <p className="post-meta">
@@ -45,9 +45,6 @@ export default function Blog() {
 
   return (
     <div className="blog-app">
-      {/* <header className="blog-header">
-        <h1>Blog</h1>
-      </header> */}
       <main className="post-list">
         {posts.length === 0 && <p className="empty">No posts yet.</p>}
         {posts.map(post => {

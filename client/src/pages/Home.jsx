@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FeatureSlider from '../components/FeatureSlider'
 import AboutSection from '../components/AboutSection'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   const [posts, setPosts] = useState([])
@@ -25,9 +23,10 @@ export default function Home() {
             <span className="eyebrow" style={{ color: '#FBBF24' }}>★ FROM THE BLOG</span>
             <h2 className="section-heading">RECENT UPDATES</h2>
           </div>
-          <Link to="/blog" className="btn-outline">
-            ALL POSTS <FontAwesomeIcon icon={faArrowRight} />
-          </Link>        </div>
+            <Link to="/blog" className="comic-btn whitefill">
+              ALL POSTS
+            </Link>        
+          </div>
         {/* CONTENTS */}
         {posts.length === 0 && <p className="empty">No posts yet.</p>}
 
@@ -39,8 +38,8 @@ export default function Home() {
                   {new Date(post.createdAt).toLocaleDateString()}
                 </p>
                 <h3>{post.title}</h3>
-                <span className="read-more">
-                  READ MORE <FontAwesomeIcon icon={faArrowRight} />
+                <span className="read-more comic-btn whitefill">
+                  READ MORE
                 </span>
               </article>
             </Link>

@@ -6,7 +6,7 @@ const multer = require('multer');
 const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const r2 = require('../config/r2');
 
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 15 * 1024 * 1024 } }); // 15MB
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 15 * 1024 * 1024 } });
 
 router.get('/', async (req, res) => {
   try {
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', auth, upload.single('media'), async (req, res) => {
   try {
-    const { title, description, tags, badge, linkTo, linkType, order, accentColor } = req.body;
+    const { title, description, badge, linkTo, linkType, linkLabel, order, accentColor } = req.body;
     let mediaUrl = null;
 
     if (req.file) {
@@ -36,11 +36,11 @@ router.post('/', auth, upload.single('media'), async (req, res) => {
     const slide = new Slide({
       title,
       description,
-      tags: tags ? tags.split(',').map(t => t.trim()) : [],
       badge,
       mediaUrl,
       linkTo: linkTo || '/projects',
       linkType: linkType || 'internal',
+      linkLabel: linkLabel || '',
       order: Number(order) || 0,
       accentColor: accentColor || '#06B6D4',
     });
